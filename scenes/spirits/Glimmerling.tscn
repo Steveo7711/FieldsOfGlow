@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ca877bboyofbf"]
+
+[ext_resource type="PackedScene" uid="uid://dodx7ojon2on0" path="res://scenes/spirits/SpiritBase.tscn" id="1_bfucq"]
+[ext_resource type="Script" uid="uid://ctovc8ccs3twl" path="res://scenes/spirits/Glimmerling.gd" id="2_8i0gx"]
+[ext_resource type="Resource" uid="uid://cj6ny2s03tck1" path="res://scripts/resources/spirits/glimmerling.tres" id="3_8i0gx"]
+
+[node name="Glimmerling" unique_id=2025895094 instance=ExtResource("1_bfucq")]
+script = ExtResource("2_8i0gx")
+spirit_data = ExtResource("3_8i0gx")

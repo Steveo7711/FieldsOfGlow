@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SpiritData" format=3 uid="uid://dnsxjag2qk51e"]
+
+[ext_resource type="Script" uid="uid://fs1o5gbcmrcf" path="res://scripts/resources/SpiritData.gd" id="1_jq8k0"]
+
+[resource]
+script = ExtResource("1_jq8k0")
+spirit_name = "Sunbell"
+spirit_id = "sunbell"
+light_intensity = 0.8
+light_color = Color(1, 0.98039216, 0.19607843, 1)
+light_radius = 100.0
+movement_pattern = 1
+traits = Array[String](["warm_pulse", "morning_favor"])
+metadata/_custom_type_script = "uid://fs1o5gbcmrcf"

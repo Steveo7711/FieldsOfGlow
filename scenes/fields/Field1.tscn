@@ -3,9 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dh201hgplqf6c" path="res://icon.svg" id="1_1ovnd"]
 [ext_resource type="Script" uid="uid://bfj8qiwfeim2u" path="res://scenes/fields/Field1.gd" id="1_803vu"]
 [ext_resource type="PackedScene" uid="uid://brew6757gp78x" path="res://scenes/Player/player.tscn" id="2_jmxhy"]
-[ext_resource type="PackedScene" uid="uid://dodx7ojon2on0" path="res://scenes/spirits/SpiritBase.tscn" id="4_mmhnl"]
-[ext_resource type="Resource" uid="uid://da5nuyhldyyyt" path="res://scripts/resources/spirits/wispkin.tres" id="5_oiel6"]
+[ext_resource type="Script" uid="uid://d2ys6vplw8kte" path="res://scripts/fields/DayNightCycle.gd" id="3_dsrp2"]
 [ext_resource type="PackedScene" uid="uid://bdhcbc5d7g2t3" path="res://scenes/crops/CropTile.tscn" id="6_xdnyi"]
+[ext_resource type="PackedScene" uid="uid://bm86118qsp8ys" path="res://scenes/spirits/Sunbell.tscn" id="6_y0a3u"]
+[ext_resource type="PackedScene" uid="uid://d0w5v5ep3xsmh" path="res://scenes/spirits/Wispkin.tscn" id="7_elteb"]
+[ext_resource type="PackedScene" uid="uid://ca877bboyofbf" path="res://scenes/spirits/Glimmerling.tscn" id="8_i7jnl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmxhy"]
 texture = ExtResource("1_1ovnd")
@@ -50,6 +52,7 @@ script = ExtResource("1_803vu")
 tile_set = SubResource("TileSet_803vu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1949580913]
+script = ExtResource("3_dsrp2")
 
 [node name="CropGrid" type="Node2D" parent="." unique_id=1190942121]
 
@@ -90,9 +93,14 @@ shape = SubResource("RectangleShape2D_mmhnl")
 [node name="Player" parent="." unique_id=1924952034 instance=ExtResource("2_jmxhy")]
 position = Vector2(108, 117)
 
-[node name="SpiritBase" parent="." unique_id=2025895094 instance=ExtResource("4_mmhnl")]
-position = Vector2(65, 71)
-spirit_data = ExtResource("5_oiel6")
-
 [node name="CropTile" parent="." unique_id=280209015 instance=ExtResource("6_xdnyi")]
 position = Vector2(81, 85)
+
+[node name="Sunbell" parent="." unique_id=2025895094 instance=ExtResource("6_y0a3u")]
+position = Vector2(381, 81)
+
+[node name="Wispkin" parent="." unique_id=1219656739 instance=ExtResource("7_elteb")]
+position = Vector2(226, 197)
+
+[node name="Glimmerling" parent="." unique_id=679351783 instance=ExtResource("8_i7jnl")]
+position = Vector2(161, 62)

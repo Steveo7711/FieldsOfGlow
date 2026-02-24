@@ -15,9 +15,10 @@ func enter() -> void:
 func update(delta: float) -> void:
 	hover_timer += delta
 	if hover_timer >= hover_duration:
-		spirit.state_machine.transition_to("wandering")
+		var spirit_base = spirit as SpiritBase
+		if spirit_base:
+			spirit_base.state_machine.transition_to("wandering")
 
 func physics_update(delta: float) -> void:
-	# Gentle bob in place
 	spirit.velocity = Vector2(0, sin(hover_timer * 2.0) * 5.0)
 	spirit.move_and_slide()

@@ -11,7 +11,7 @@ func _ready() -> void:
 	for child in get_children():
 		if child is State:
 			states[child.name.to_lower()] = child
-			child.spirit = owner
+			child.spirit = get_parent()
 	
 	# Enter initial state
 	if initial_state:

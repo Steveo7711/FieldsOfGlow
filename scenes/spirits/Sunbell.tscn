@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bm86118qsp8ys"]
+
+[ext_resource type="PackedScene" uid="uid://dodx7ojon2on0" path="res://scenes/spirits/SpiritBase.tscn" id="1_lyh4h"]
+[ext_resource type="Script" uid="uid://chsd78fxd440" path="res://scenes/spirits/Sunbell.gd" id="2_wkvn4"]
+[ext_resource type="Resource" uid="uid://dnsxjag2qk51e" path="res://scripts/resources/spirits/sunbell.tres" id="3_wkvn4"]
+
+[node name="Sunbell" unique_id=2025895094 instance=ExtResource("1_lyh4h")]
+script = ExtResource("2_wkvn4")
+spirit_data = ExtResource("3_wkvn4")

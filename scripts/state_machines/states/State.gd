@@ -1,7 +1,7 @@
 class_name State
 extends Node
 
-var spirit: SpiritBase
+var spirit: CharacterBody2D
 
 func enter() -> void:
 	pass

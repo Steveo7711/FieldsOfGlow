@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d0w5v5ep3xsmh"]
+
+[ext_resource type="PackedScene" uid="uid://dodx7ojon2on0" path="res://scenes/spirits/SpiritBase.tscn" id="1_wm4g4"]
+
+[node name="Wispkin" unique_id=2025895094 instance=ExtResource("1_wm4g4")]
+script = null

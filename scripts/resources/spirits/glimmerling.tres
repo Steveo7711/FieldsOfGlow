@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SpiritData" format=3 uid="uid://cj6ny2s03tck1"]
+
+[ext_resource type="Script" uid="uid://fs1o5gbcmrcf" path="res://scripts/resources/SpiritData.gd" id="1_k4acx"]
+
+[resource]
+script = ExtResource("1_k4acx")
+spirit_name = "Glimmerling"
+spirit_id = "glimmerling"
+light_intensity = 0.6
+light_color = Color(0.9063318, 0.6651851, 1, 1)
+light_radius = 60.0
+temperament = 3
+traits = Array[String](["flicker_chance", "unstable_glow"])
+metadata/_custom_type_script = "uid://fs1o5gbcmrcf"
