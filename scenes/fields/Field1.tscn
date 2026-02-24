@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dh201hgplqf6c" path="res://icon.svg" id="1_1ovnd"]
 [ext_resource type="Script" uid="uid://bfj8qiwfeim2u" path="res://scenes/fields/Field1.gd" id="1_803vu"]
 [ext_resource type="PackedScene" uid="uid://brew6757gp78x" path="res://scenes/Player/player.tscn" id="2_jmxhy"]
+[ext_resource type="PackedScene" uid="uid://dodx7ojon2on0" path="res://scenes/spirits/SpiritBase.tscn" id="4_mmhnl"]
+[ext_resource type="Resource" uid="uid://da5nuyhldyyyt" path="res://scripts/resources/spirits/wispkin.tres" id="5_oiel6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmxhy"]
 texture = ExtResource("1_1ovnd")
@@ -86,3 +88,7 @@ shape = SubResource("RectangleShape2D_mmhnl")
 
 [node name="Player" parent="." unique_id=1924952034 instance=ExtResource("2_jmxhy")]
 position = Vector2(640, 480)
+
+[node name="SpiritBase" parent="." unique_id=2025895094 instance=ExtResource("4_mmhnl")]
+position = Vector2(519, 442)
+spirit_data = ExtResource("5_oiel6")

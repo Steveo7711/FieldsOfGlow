@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dodx7ojon2on0"]
+
+[ext_resource type="Script" uid="uid://c3cbjbstoeh51" path="res://scenes/spirits/SpiritBase.gd" id="1_rut4p"]
+[ext_resource type="Texture2D" uid="uid://bp6aqhha12e4e" path="res://assets/textures/light_gradient.tres" id="2_1maks"]
+[ext_resource type="Script" uid="uid://dvmd2odhorqvs" path="res://scripts/state_machines/SpiritStateMachine.gd" id="2_3eb42"]
+[ext_resource type="Script" uid="uid://ctyc1hcs1f6vn" path="res://scripts/state_machines/states/WanderingState.gd" id="3_1maks"]
+[ext_resource type="Script" uid="uid://dku0hvqc80rcu" path="res://scripts/state_machines/states/HoveringState.gd" id="4_abjg6"]
+[ext_resource type="Script" uid="uid://qbqpvimuwq81" path="res://scripts/state_machines/states/RestingState.gd" id="5_fk5c8"]
+[ext_resource type="Script" uid="uid://xnnxussertl0" path="res://scripts/state_machines/states/ReactingState.gd" id="6_tmyr7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r06dh"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uk6qo"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nf17"]
+radius = 40.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rr4kk"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 15.0
+gravity = Vector3(0, 98, 0)
+scale_min = 2.0
+scale_max = 4.0
+
+[node name="SpiritBase" type="CharacterBody2D" unique_id=2025895094]
+script = ExtResource("1_rut4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=731670225]
+shape = SubResource("CircleShape2D_r06dh")
+
+[node name="LightEmitter" type="PointLight2D" parent="." unique_id=871392526]
+energy = 0.8
+range_z_min = 0
+range_z_max = 80
+texture = ExtResource("2_1maks")
+
+[node name="LightArea" type="Area2D" parent="." unique_id=829295394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightArea" unique_id=1153471500]
+shape = SubResource("CircleShape2D_uk6qo")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=2090568342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1034309783]
+shape = SubResource("CircleShape2D_5nf17")
+
+[node name="SpiritVisual" type="AnimatedSprite2D" parent="." unique_id=1004250615]
+
+[node name="GlowParticles" type="GPUParticles2D" parent="." unique_id=308580615]
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_rr4kk")
+
+[node name="SpiritStateMachine" type="Node" parent="." unique_id=1250581823 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_3eb42")
+initial_state = NodePath("WanderingState")
+
+[node name="WanderingState" type="Node" parent="SpiritStateMachine" unique_id=656043353]
+script = ExtResource("3_1maks")
+
+[node name="HoveringState" type="Node" parent="SpiritStateMachine" unique_id=308427467]
+script = ExtResource("4_abjg6")
+
+[node name="RestingState" type="Node" parent="SpiritStateMachine" unique_id=160243684]
+script = ExtResource("5_fk5c8")
+
+[node name="ReactingState" type="Node" parent="SpiritStateMachine" unique_id=1788776530]
+script = ExtResource("6_tmyr7")
