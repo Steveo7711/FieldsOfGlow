@@ -48,11 +48,11 @@ func _check_growth() -> void:
 func _advance_stage() -> void:
 	current_stage += 1
 	EventBus.crop_grew.emit(crop_data.crop_id, current_stage)
-	print("Crop grew to stage: ", current_stage)
+
 	
 	if current_stage >= crop_data.growth_stages:
 		is_harvestable = true
-		print("Crop is ready to harvest!")
+
 
 func harvest() -> String:
 	if not is_harvestable:

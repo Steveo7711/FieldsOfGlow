@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FieldConfig" format=3 uid="uid://cl33u60s7yomf"]
+
+[ext_resource type="Script" uid="uid://clmpae55c1iuv" path="res://scripts/resources/FieldConfig.gd" id="1_1g5pr"]
+
+[resource]
+script = ExtResource("1_1g5pr")
+field_name = "Morning Field"
+field_id = "field1"
+allowed_spirits = Array[String](["wispkin", "sunbell", "glimmerling"])
+next_field = "field2"
+metadata/_custom_type_script = "uid://clmpae55c1iuv"

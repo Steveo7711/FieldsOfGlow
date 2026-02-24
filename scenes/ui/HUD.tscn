@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dj5dttoixl5dh"]
+
+[ext_resource type="Script" uid="uid://c1egfl36jrtos" path="res://scripts/ui/Hud.gd" id="1_atyv1"]
+[ext_resource type="FontFile" uid="uid://ceeppnbw5np1q" path="res://resources/fonts/MatrixtypeDisplayBold-6R4e6.ttf" id="2_6ll6g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig75s"]
+font = ExtResource("2_6ll6g")
+font_size = 8
+
+[node name="Hud" type="CanvasLayer" unique_id=2004664711]
+script = ExtResource("1_atyv1")
+
+[node name="Control" type="Control" parent="." unique_id=186685892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResourceDisplay" type="HBoxContainer" parent="Control" unique_id=148184079]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 13.0
+offset_bottom = 31.0
+
+[node name="ResourceIcon" type="TextureRect" parent="Control/ResourceDisplay" unique_id=1091705541]
+layout_mode = 2
+
+[node name="ResourceLabel" type="Label" parent="Control/ResourceDisplay" unique_id=1873670593]
+layout_mode = 2
+
+[node name="TimeDisplay" type="HBoxContainer" parent="Control" unique_id=1998792536]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 48.0
+grow_horizontal = 0
+
+[node name="DayLabel" type="Label" parent="Control/TimeDisplay" unique_id=1249349479]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="Control/TimeDisplay" unique_id=368651691]
+layout_mode = 2
+
+[node name="HarvestPrompt" type="Label" parent="Control" unique_id=1779094485]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -23.0
+offset_right = 70.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to Harvest"
+label_settings = SubResource("LabelSettings_ig75s")
+horizontal_alignment = 1
+vertical_alignment = 1

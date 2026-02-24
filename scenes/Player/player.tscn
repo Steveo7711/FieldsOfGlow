@@ -16,7 +16,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_1kbk7"]
 radius = 40.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1924952034]
+[node name="Player" type="CharacterBody2D" unique_id=1924952034 groups=["player"]]
 script = ExtResource("1_cyojo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788573101]

@@ -1,6 +1,6 @@
 extends Node
 
-const TICK_INTERVAL: float = 30.0
+const TICK_INTERVAL: float = 3.0
 const TICKS_PER_HOUR: int = 2
 const HOURS_PER_DAY: int = 24
 
