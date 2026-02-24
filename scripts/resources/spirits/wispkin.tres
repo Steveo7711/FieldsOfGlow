@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpiritData" format=3 uid="uid://da5nuyhldyyyt"]
+
+[ext_resource type="Script" uid="uid://fs1o5gbcmrcf" path="res://scripts/resources/SpiritData.gd" id="1_fceyt"]
+
+[resource]
+script = ExtResource("1_fceyt")
+spirit_name = "Wispkin"
+spirit_id = "wispkin"
+light_color = Color(0.8627451, 0.8627451, 1, 1)
+temperament = 1
+traits = Array[String](["balanced_glow", "comforting_presence"])
+metadata/_custom_type_script = "uid://fs1o5gbcmrcf"

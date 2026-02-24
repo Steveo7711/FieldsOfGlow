@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://colghvr015ovb"]
+
+[ext_resource type="Script" uid="uid://b6f60fgtyr61y" path="res://scripts/resources/CropData.gd" id="1_tq34a"]
+
+[resource]
+script = ExtResource("1_tq34a")
+crop_name = "Grain"
+crop_id = "grain"
+preferred_light_color = Color(1, 0.8627451, 0.39215687, 1)
+yield_resource = "grain_bundle"
+metadata/_custom_type_script = "uid://b6f60fgtyr61y"

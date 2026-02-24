@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cfipgo5qlomsj"]
+
+[ext_resource type="Texture2D" uid="uid://dh201hgplqf6c" path="res://icon.svg" id="1_1ovnd"]
+[ext_resource type="Script" uid="uid://bfj8qiwfeim2u" path="res://scenes/fields/Field1.gd" id="1_803vu"]
+[ext_resource type="PackedScene" uid="uid://brew6757gp78x" path="res://scenes/Player/player.tscn" id="2_jmxhy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmxhy"]
+texture = ExtResource("1_1ovnd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_803vu"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_jmxhy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ovnd"]
+size = Vector2(1280, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmxhy"]
+size = Vector2(1280, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_803vu"]
+size = Vector2(16, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmhnl"]
+size = Vector2(16, 960)
+
+[node name="Field1" type="Node2D" unique_id=71119319]
+script = ExtResource("1_803vu")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1096884257]
+tile_set = SubResource("TileSet_803vu")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1949580913]
+
+[node name="CropGrid" type="Node2D" parent="." unique_id=1190942121]
+
+[node name="SpiritSpawnPoints" type="Node2D" parent="." unique_id=165750105]
+
+[node name="SpawnPoint1" type="Marker2D" parent="SpiritSpawnPoints" unique_id=833945763]
+position = Vector2(320, 240)
+
+[node name="SpawnPoint2" type="Marker2D" parent="SpiritSpawnPoints" unique_id=287339570]
+position = Vector2(960, 240)
+
+[node name="SpawnPoint3" type="Marker2D" parent="SpiritSpawnPoints" unique_id=1738864307]
+position = Vector2(320, 720)
+
+[node name="SpawnPoint4" type="Marker2D" parent="SpiritSpawnPoints" unique_id=941113643]
+position = Vector2(960, 720)
+
+[node name="PlacedObjects" type="Node2D" parent="." unique_id=1261370767]
+
+[node name="FieldBoundary" type="StaticBody2D" parent="." unique_id=1787651939]
+
+[node name="Top" type="CollisionShape2D" parent="FieldBoundary" unique_id=1227543928]
+position = Vector2(640, -8)
+shape = SubResource("RectangleShape2D_1ovnd")
+
+[node name="Bottom" type="CollisionShape2D" parent="FieldBoundary" unique_id=36443779]
+position = Vector2(640, 968)
+shape = SubResource("RectangleShape2D_jmxhy")
+
+[node name="Left" type="CollisionShape2D" parent="FieldBoundary" unique_id=65737675]
+position = Vector2(-8, 480)
+shape = SubResource("RectangleShape2D_803vu")
+
+[node name="Right" type="CollisionShape2D" parent="FieldBoundary" unique_id=1600738243]
+position = Vector2(1288, 480)
+shape = SubResource("RectangleShape2D_mmhnl")
+
+[node name="Player" parent="." unique_id=1924952034 instance=ExtResource("2_jmxhy")]
+position = Vector2(640, 480)

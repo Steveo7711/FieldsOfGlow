@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://brew6757gp78x"]
+
+[ext_resource type="Script" uid="uid://bt8e8etirevry" path="res://scripts/player/PlayerMovement.gd" id="1_cyojo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk62l"]
+height = 28.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cyojo"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1kbk7"]
+radius = 40.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1924952034]
+script = ExtResource("1_cyojo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788573101]
+shape = SubResource("CapsuleShape2D_kk62l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1337023151]
+sprite_frames = SubResource("SpriteFrames_cyojo")
+animation = &"idle"
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=2059326278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1150160725]
+shape = SubResource("CircleShape2D_1kbk7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1686602948]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 960
+position_smoothing_enabled = true
