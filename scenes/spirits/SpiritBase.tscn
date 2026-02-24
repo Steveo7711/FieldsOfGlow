@@ -58,16 +58,16 @@ process_material = SubResource("ParticleProcessMaterial_rr4kk")
 
 [node name="SpiritStateMachine" type="Node" parent="." unique_id=1250581823 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_3eb42")
-initial_state = NodePath("WanderingState")
+initial_state = NodePath("Hovering")
 
-[node name="WanderingState" type="Node" parent="SpiritStateMachine" unique_id=656043353]
+[node name="Wandering" type="Node" parent="SpiritStateMachine" unique_id=656043353]
 script = ExtResource("3_1maks")
 
-[node name="HoveringState" type="Node" parent="SpiritStateMachine" unique_id=308427467]
+[node name="Hovering" type="Node" parent="SpiritStateMachine" unique_id=308427467]
 script = ExtResource("4_abjg6")
 
-[node name="RestingState" type="Node" parent="SpiritStateMachine" unique_id=160243684]
+[node name="Resting" type="Node" parent="SpiritStateMachine" unique_id=160243684]
 script = ExtResource("5_fk5c8")
 
-[node name="ReactingState" type="Node" parent="SpiritStateMachine" unique_id=1788776530]
+[node name="Reacting" type="Node" parent="SpiritStateMachine" unique_id=1788776530]
 script = ExtResource("6_tmyr7")

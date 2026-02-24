@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bdhcbc5d7g2t3"]
+
+[ext_resource type="Script" uid="uid://crjitql3wiilf" path="res://scripts/components/LightReceiver.gd" id="1_tfqc0"]
+[ext_resource type="Script" uid="uid://rmg4xkmw6kqr" path="res://scripts/crops/CropTile.gd" id="1_yfjq2"]
+[ext_resource type="Resource" uid="uid://colghvr015ovb" path="res://scripts/resources/crops/grain.tres" id="2_cqt18"]
+[ext_resource type="Script" uid="uid://dfpxd857v56ro" path="res://scripts/components/MutationTracker.gd" id="2_g8r5k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6h1o"]
+size = Vector2(32, 32)
+
+[node name="CropTile" type="Area2D" unique_id=280209015]
+script = ExtResource("1_yfjq2")
+crop_data = ExtResource("2_cqt18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2128216724]
+shape = SubResource("RectangleShape2D_d6h1o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=24101426]
+
+[node name="LightReceiver" type="Node" parent="." unique_id=1857595074]
+script = ExtResource("1_tfqc0")
+
+[node name="MutationTracker" type="Node" parent="." unique_id=553929286]
+script = ExtResource("2_g8r5k")
