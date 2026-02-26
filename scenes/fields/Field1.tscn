@@ -114,28 +114,35 @@ shape = SubResource("RectangleShape2D_xdnyi")
 position = Vector2(727, 324)
 
 [node name="Wispkin" parent="." unique_id=1407719233 instance=ExtResource("7_elteb")]
-position = Vector2(870, 189)
+position = Vector2(843, 160)
 
 [node name="Sunbell" parent="." unique_id=673631767 instance=ExtResource("6_y0a3u")]
 position = Vector2(593, 177)
 
 [node name="CropTile" parent="." unique_id=280209015 instance=ExtResource("6_xdnyi")]
 position = Vector2(582, 326)
+crop_instance_id = "field1_crop_01"
 
 [node name="CropTile2" parent="." unique_id=2144725474 instance=ExtResource("6_xdnyi")]
 position = Vector2(853, 326)
+crop_instance_id = "field1_crop_02"
 
 [node name="CropTile3" parent="." unique_id=1506869406 instance=ExtResource("6_xdnyi")]
 position = Vector2(853, 131)
+crop_instance_id = "field1_crop_03"
 
 [node name="CropTile4" parent="." unique_id=2050070092 instance=ExtResource("6_xdnyi")]
 position = Vector2(582, 138)
+crop_instance_id = "field1_crop_04"
 
 [node name="CropTile5" parent="." unique_id=1818481914 instance=ExtResource("6_xdnyi")]
 position = Vector2(727, 326)
+crop_instance_id = "field1_crop_05"
 
 [node name="CropTile6" parent="." unique_id=1817173958 instance=ExtResource("6_xdnyi")]
 position = Vector2(727, 138)
+crop_instance_id = "field1_crop_06"
 
 [node name="CropTile7" parent="." unique_id=47710180 instance=ExtResource("6_xdnyi")]
 position = Vector2(727, 138)
+crop_instance_id = "field1_crop_07"

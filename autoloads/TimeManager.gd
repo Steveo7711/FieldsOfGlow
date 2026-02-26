@@ -25,6 +25,7 @@ func _on_tick() -> void:
 	if current_tick % TICKS_PER_HOUR == 0:
 		current_hour = (current_hour + 1) % HOURS_PER_DAY
 		EventBus.hour_changed.emit(current_hour)
+		DataManager.save_game()
 		
 		if current_hour == 0:
 			current_day += 1

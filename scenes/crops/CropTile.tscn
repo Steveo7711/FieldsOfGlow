@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6h1o"]
 size = Vector2(32, 32)
 
-[node name="CropTile" type="Area2D" unique_id=280209015]
+[node name="CropTile" type="Area2D" unique_id=280209015 groups=["crops"]]
 script = ExtResource("1_yfjq2")
 crop_data = ExtResource("2_cqt18")
 

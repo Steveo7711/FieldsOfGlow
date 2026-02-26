@@ -2,6 +2,7 @@ class_name CropTile
 extends Area2D
 
 @export var crop_data: CropData
+@export var crop_instance_id: String = ""
 
 @onready var crop_visual: AnimatedSprite2D = $CropVisual
 @onready var light_receiver: LightReceiver = $LightReceiver
@@ -16,6 +17,28 @@ var ticks_since_check: int = 0
 func _ready() -> void:
 	add_to_group("crops")
 	EventBus.tick_passed.connect(_on_tick)
+	_load_state()
+
+func _load_state() -> void:
+	if crop_instance_id == "":
+		return
+	var saved = DataManager.get_crop_state(crop_instance_id)
+	if saved.is_empty():
+		return
+	current_stage = saved.get("stage", 0)
+	light_receiver.accumulated_light = saved.get("accumulated", 0.0)
+	is_harvestable = saved.get("harvestable", false)
+	print("Crop state loaded: ", crop_instance_id, " stage: ", current_stage)
+
+func _save_state() -> void:
+	if crop_instance_id == "":
+		return
+	DataManager.save_crop_state(
+		crop_instance_id,
+		current_stage,
+		light_receiver.accumulated_light,
+		is_harvestable
+	)
 
 func _on_tick() -> void:
 	if is_harvestable:
@@ -43,17 +66,19 @@ func _check_growth() -> void:
 			crop_data.mutation_chance
 		)
 		if mutation != "":
+			print("Crop mutated! Trait: ", mutation)
 			DataManager.add_resource("mutated_crop", 1)
-
+			print("Mutated crop added to inventory!")
 
 func _advance_stage() -> void:
 	current_stage += 1
 	EventBus.crop_grew.emit(crop_data.crop_id, current_stage)
-
+	print("Crop grew to stage: ", current_stage)
+	_save_state()
 	
 	if current_stage >= crop_data.growth_stages:
 		is_harvestable = true
-
+		print("Crop is ready to harvest!")
 
 func harvest() -> String:
 	if not is_harvestable:
@@ -68,6 +93,8 @@ func harvest() -> String:
 	is_harvestable = false
 	light_receiver.reset()
 	mutation_tracker.reset()
+	_save_state()
+	DataManager.save()
 	
 	return resource
 
