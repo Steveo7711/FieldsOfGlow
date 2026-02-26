@@ -30,7 +30,7 @@ func _load_state() -> void:
 	is_harvestable = saved.get("harvestable", false)
 	print("Crop state loaded: ", crop_instance_id, " stage: ", current_stage)
 
-func _save_state() -> void:
+func save_state() -> void:
 	if crop_instance_id == "":
 		return
 	DataManager.save_crop_state(
@@ -74,7 +74,7 @@ func _advance_stage() -> void:
 	current_stage += 1
 	EventBus.crop_grew.emit(crop_data.crop_id, current_stage)
 	print("Crop grew to stage: ", current_stage)
-	_save_state()
+	save_state()
 	
 	if current_stage >= crop_data.growth_stages:
 		is_harvestable = true
@@ -93,7 +93,7 @@ func harvest() -> String:
 	is_harvestable = false
 	light_receiver.reset()
 	mutation_tracker.reset()
-	_save_state()
+	save_state()
 	DataManager.save()
 	
 	return resource

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://duhjos02trley"]
+
+[ext_resource type="FontFile" uid="uid://ceeppnbw5np1q" path="res://resources/fonts/MatrixtypeDisplayBold-6R4e6.ttf" id="1_7ou32"]
+
+[resource]
+font = ExtResource("1_7ou32")
+font_size = 8
+font_color = Color(0.48452926, 0.89165515, 1, 1)

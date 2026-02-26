@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bbrhs8qsakk5h"]
+
+[ext_resource type="FontFile" uid="uid://ceeppnbw5np1q" path="res://resources/fonts/MatrixtypeDisplayBold-6R4e6.ttf" id="1_haggv"]
+
+[resource]
+font = ExtResource("1_haggv")
+font_size = 8
+font_color = Color(0.19247282, 1, 0.9667483, 1)

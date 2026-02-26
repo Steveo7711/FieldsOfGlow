@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://jhh8ojk3a7f3"]
+
+[ext_resource type="Script" uid="uid://b84pb802tjk00" path="res://scripts/ui/ReturnSummary.gd" id="1_s0tdg"]
+[ext_resource type="LabelSettings" uid="uid://duhjos02trley" path="res://resources/fonts/ReturnSummaryfont8pt.tres" id="2_2cc25"]
+[ext_resource type="LabelSettings" uid="uid://bbrhs8qsakk5h" path="res://resources/fonts/ReturnSummaryTitlefont8pt.tres" id="2_7buk6"]
+
+[node name="ReturnSummary" type="CanvasLayer" unique_id=1958893913]
+script = ExtResource("1_s0tdg")
+
+[node name="Control" type="Control" parent="." unique_id=1751477545]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1146998008]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -80.0
+offset_right = 100.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=1718698955]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 104.0
+grow_horizontal = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=825173690]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_7buk6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeAwayLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1278923543]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_7buk6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SeparatorLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1365687697]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_2cc25")
+
+[node name="CropsGrownLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1496230735]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_2cc25")
+
+[node name="HarvestsReadyLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1883160061]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_2cc25")
+
+[node name="MutationsLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=59526191]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_2cc25")
+
+[node name="DayLabel" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1387180783]
+layout_mode = 2
+text = "placeholder"
+label_settings = ExtResource("2_2cc25")
+
+[node name="ContinueButton" type="Button" parent="Control/Panel" unique_id=279776572]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -25.0
+offset_right = 4.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0

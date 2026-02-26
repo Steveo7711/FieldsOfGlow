@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d0w5v5ep3xsmh" path="res://scenes/spirits/Wispkin.tscn" id="7_elteb"]
 [ext_resource type="PackedScene" uid="uid://ca877bboyofbf" path="res://scenes/spirits/Glimmerling.tscn" id="8_i7jnl"]
 [ext_resource type="PackedScene" uid="uid://dj5dttoixl5dh" path="res://scenes/ui/HUD.tscn" id="10_i7jnl"]
+[ext_resource type="PackedScene" uid="uid://jhh8ojk3a7f3" path="res://scenes/ReturnSummary/ReturnSummary.tscn" id="12_858en"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmxhy"]
 texture = ExtResource("1_1ovnd")
@@ -101,6 +102,8 @@ shape = SubResource("RectangleShape2D_mmhnl")
 position = Vector2(1124, 131)
 
 [node name="Hud" parent="." unique_id=2004664711 instance=ExtResource("10_i7jnl")]
+
+[node name="ReturnSummary" parent="Hud" unique_id=1958893913 instance=ExtResource("12_858en")]
 
 [node name="FieldExit" type="Area2D" parent="." unique_id=726603014]
 script = ExtResource("7_dsrp2")
