@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FieldConfig" format=3 uid="uid://cn3dwg3g2hyrm"]
+
+[ext_resource type="Script" uid="uid://clmpae55c1iuv" path="res://scripts/resources/FieldConfig.gd" id="1_g102k"]
+
+[resource]
+script = ExtResource("1_g102k")
+field_name = "Mist Hollow"
+field_id = "field2"
+ambient_light_color = Color(0.85430586, 0.9063318, 1, 1)
+allowed_spirits = Array[String](["wispkin", "glimmerling"])
+max_spirits = 6
+unlock_condition = "mutated_crop"
+metadata/_custom_type_script = "uid://clmpae55c1iuv"

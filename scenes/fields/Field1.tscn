@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d2ys6vplw8kte" path="res://scripts/fields/DayNightCycle.gd" id="3_dsrp2"]
 [ext_resource type="PackedScene" uid="uid://bdhcbc5d7g2t3" path="res://scenes/crops/CropTile.tscn" id="6_xdnyi"]
 [ext_resource type="PackedScene" uid="uid://bm86118qsp8ys" path="res://scenes/spirits/Sunbell.tscn" id="6_y0a3u"]
+[ext_resource type="Script" uid="uid://bdrqlb1fy8fdr" path="res://scripts/fields/FieldTransition.gd" id="7_dsrp2"]
 [ext_resource type="PackedScene" uid="uid://d0w5v5ep3xsmh" path="res://scenes/spirits/Wispkin.tscn" id="7_elteb"]
 [ext_resource type="PackedScene" uid="uid://ca877bboyofbf" path="res://scenes/spirits/Glimmerling.tscn" id="8_i7jnl"]
 [ext_resource type="PackedScene" uid="uid://dj5dttoixl5dh" path="res://scenes/ui/HUD.tscn" id="10_i7jnl"]
@@ -46,6 +47,9 @@ size = Vector2(16, 960)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmhnl"]
 size = Vector2(16, 960)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdnyi"]
+size = Vector2(16, 200)
 
 [node name="Field1" type="Node2D" unique_id=71119319]
 script = ExtResource("1_803vu")
@@ -94,51 +98,44 @@ position = Vector2(1288, 480)
 shape = SubResource("RectangleShape2D_mmhnl")
 
 [node name="Player" parent="." unique_id=1924952034 instance=ExtResource("2_jmxhy")]
-position = Vector2(108, 117)
-
-[node name="CropTile" parent="." unique_id=280209015 instance=ExtResource("6_xdnyi")]
-position = Vector2(214, 167)
-
-[node name="CropTile2" parent="." unique_id=58234127 instance=ExtResource("6_xdnyi")]
-position = Vector2(168, 80)
-
-[node name="CropTile3" parent="." unique_id=1326378150 instance=ExtResource("6_xdnyi")]
-position = Vector2(367, 83)
-
-[node name="CropTile4" parent="." unique_id=775890552 instance=ExtResource("6_xdnyi")]
-position = Vector2(399, 223)
-
-[node name="CropTile5" parent="." unique_id=1294111582 instance=ExtResource("6_xdnyi")]
-position = Vector2(79, 216)
-
-[node name="CropTile6" parent="." unique_id=446233158 instance=ExtResource("6_xdnyi")]
-position = Vector2(57, 51)
-
-[node name="CropTile7" parent="." unique_id=1819526931 instance=ExtResource("6_xdnyi")]
-position = Vector2(275, 138)
-
-[node name="CropTile8" parent="." unique_id=1852666473 instance=ExtResource("6_xdnyi")]
-position = Vector2(276, 55)
-
-[node name="CropTile9" parent="." unique_id=1672873434 instance=ExtResource("6_xdnyi")]
-position = Vector2(371, 153)
-
-[node name="CropTile10" parent="." unique_id=1678914718 instance=ExtResource("6_xdnyi")]
-position = Vector2(28, 155)
-
-[node name="CropTile11" parent="." unique_id=1008465217 instance=ExtResource("6_xdnyi")]
-position = Vector2(148, 160)
-
-[node name="CropTile12" parent="." unique_id=871354232 instance=ExtResource("6_xdnyi")]
-position = Vector2(148, 160)
-
-[node name="Sunbell" parent="." unique_id=2025895094 instance=ExtResource("6_y0a3u")]
-position = Vector2(381, 81)
-
-[node name="Wispkin" parent="." unique_id=1219656739 instance=ExtResource("7_elteb")]
-position = Vector2(226, 197)
-
-[node name="Glimmerling" parent="." unique_id=679351783 instance=ExtResource("8_i7jnl")]
-position = Vector2(161, 62)
+position = Vector2(1124, 131)
 
 [node name="Hud" parent="." unique_id=2004664711 instance=ExtResource("10_i7jnl")]
+
+[node name="FieldExit" type="Area2D" parent="." unique_id=726603014]
+script = ExtResource("7_dsrp2")
+requires_item = "mutated_crop"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FieldExit" unique_id=430627641]
+position = Vector2(1272, 138)
+shape = SubResource("RectangleShape2D_xdnyi")
+
+[node name="Glimmerling" parent="." unique_id=2025895094 instance=ExtResource("8_i7jnl")]
+position = Vector2(727, 324)
+
+[node name="Wispkin" parent="." unique_id=1407719233 instance=ExtResource("7_elteb")]
+position = Vector2(870, 189)
+
+[node name="Sunbell" parent="." unique_id=673631767 instance=ExtResource("6_y0a3u")]
+position = Vector2(593, 177)
+
+[node name="CropTile" parent="." unique_id=280209015 instance=ExtResource("6_xdnyi")]
+position = Vector2(582, 326)
+
+[node name="CropTile2" parent="." unique_id=2144725474 instance=ExtResource("6_xdnyi")]
+position = Vector2(853, 326)
+
+[node name="CropTile3" parent="." unique_id=1506869406 instance=ExtResource("6_xdnyi")]
+position = Vector2(853, 131)
+
+[node name="CropTile4" parent="." unique_id=2050070092 instance=ExtResource("6_xdnyi")]
+position = Vector2(582, 138)
+
+[node name="CropTile5" parent="." unique_id=1818481914 instance=ExtResource("6_xdnyi")]
+position = Vector2(727, 326)
+
+[node name="CropTile6" parent="." unique_id=1817173958 instance=ExtResource("6_xdnyi")]
+position = Vector2(727, 138)
+
+[node name="CropTile7" parent="." unique_id=47710180 instance=ExtResource("6_xdnyi")]
+position = Vector2(727, 138)

@@ -15,6 +15,10 @@ func add_resource(resource_id: String, amount: int) -> void:
 func get_resource(resource_id: String) -> int:
 	return inventory.get(resource_id, 0)
 
+func has_item(item_id: String) -> bool:
+	return inventory.get(item_id, 0) > 0
+
+
 func save() -> void:
 	last_save_timestamp = Time.get_unix_time_from_system()
 	var data = {

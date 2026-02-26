@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cyukagdmop1ay"]
+
+[ext_resource type="PackedScene" uid="uid://cfipgo5qlomsj" path="res://scenes/fields/Field1.tscn" id="1_5cnf8"]
+[ext_resource type="Script" uid="uid://d387e44fd4a4m" path="res://scenes/fields/Field2.gd" id="2_xsbjx"]
+[ext_resource type="Resource" uid="uid://cn3dwg3g2hyrm" path="res://scripts/resources/fields/field2_config.tres" id="3_unbyw"]
+
+[node name="Field1" unique_id=71119319 instance=ExtResource("1_5cnf8")]
+script = ExtResource("2_xsbjx")
+field_config = ExtResource("3_unbyw")
+
+[node name="CanvasModulate" parent="." index="1" unique_id=1949580913]
+color = Color(0.8548469, 0.9309246, 1, 1)
+
+[node name="FieldExit" parent="." index="8" unique_id=726603014]
+target_field = "Field1"
+requires_item = ""

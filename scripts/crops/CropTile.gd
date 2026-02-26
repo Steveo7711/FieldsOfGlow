@@ -43,7 +43,8 @@ func _check_growth() -> void:
 			crop_data.mutation_chance
 		)
 		if mutation != "":
-			print("Crop mutated! Trait: ", mutation)
+			DataManager.add_resource("mutated_crop", 1)
+
 
 func _advance_stage() -> void:
 	current_stage += 1

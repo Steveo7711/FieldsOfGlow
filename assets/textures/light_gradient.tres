@@ -10,3 +10,4 @@ width = 128
 height = 128
 fill = 1
 fill_from = Vector2(0.51111114, 0.50085473)
+fill_to = Vector2(0.94529915, 0.4940171)

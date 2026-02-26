@@ -35,7 +35,8 @@ func _on_tick() -> void:
 
 func _update_resource_display() -> void:
 	var grain = DataManager.get_resource("grain_bundle")
-	resource_label.text = "Grain: %d" % grain
+	var mutated = DataManager.get_resource("mutated_crop")
+	resource_label.text = "Grain: %d  |  Mutated: %d" % [grain, mutated]
 
 func _check_harvest_prompt() -> void:
 	var crops = get_tree().get_nodes_in_group("crops")
